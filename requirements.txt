@@ -2,3 +2,6 @@ pandas
 skit-learn
 numpy
 sklearn
+keras
+matplotlib
+tensorflow

@@ -8,8 +8,8 @@ class Model:
     
     def predict(self, values):
         sample_input = np.array([values])
-        scaler = StandardScaler()
-        encoder = joblib.load(open('encoder.joblib', 'rb'))
+        scaler = joblib.load(open('scaler.joblib', 'rb'))
+        encoder = joblib.load(open('label_encoder.joblib', 'rb'))
         sample_input_scaled = scaler.transform(sample_input)
         prediction = self.model.predict(sample_input_scaled)
         predicted_label = encoder.inverse_transform([np.argmax(prediction)])

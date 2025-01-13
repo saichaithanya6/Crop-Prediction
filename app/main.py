@@ -5,13 +5,13 @@ from model import Model
 # Creating a local website for the generating 
 def create_streamlit_app(model):
     st.title("Crop Prediction")
-    nitrogen= st.text_input("Nitrogen:")
-    phosphorus= st.text_input("Phosphorus:")
-    potassium= st.text_input("Potassium:")
-    temperature= st.text_input("Temperature:")
-    humidity= st.text_input("Humidity:")
-    ph= st.text_input("Ph:")
-    rainfall= st.text_input("Rainfall:")
+    nitrogen= st.number_input("Nitrogen:")
+    phosphorus= st.number_input("Phosphorus:")
+    potassium= st.number_input("Potassium:")
+    temperature= st.number_input("Temperature:")
+    humidity= st.number_input("Humidity:")
+    ph= st.number_input("Ph:")
+    rainfall= st.number_input("Rainfall:")
     
     predict_button= st.button("predict")
     
@@ -20,6 +20,7 @@ def create_streamlit_app(model):
            if ph >0 and ph <=14 and temperature<100 and humidity<100 and rainfall<100:
                 values= [nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall]
                 crop_recommendation= model.predict(values)
+                st.code(crop_recommendation, language= 'markdown')
         
         except Exception as e:
             st.error(f"An Error Occurred: {e}")

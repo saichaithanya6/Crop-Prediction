@@ -1,9 +1,18 @@
 import streamlit as st
 from model import Model
 
+page_bg_img = """
+<style>
+[data-testid="stAppViewContainer"] {
+background-image: url("https://i.postimg.cc/Ls6SNyx9/image.jpg");
+background-size: cover;
+}
+</style>
+"""
 
 # Creating a local website for the generating 
 def create_streamlit_app(model):
+    st.markdown(page_bg_img, unsafe_allow_html= True)
     st.title("Crop Prediction")
     nitrogen= st.number_input("Nitrogen:")
     phosphorus= st.number_input("Phosphorus:")
@@ -35,4 +44,5 @@ def create_streamlit_app(model):
 if __name__== "__main__":
     model = Model()
     st.set_page_config(layout="wide", page_title= "Crop Prediction", page_icon= "*")
+    st.markdown(page_bg_img, unsafe_allow_html= True)
     create_streamlit_app(model)

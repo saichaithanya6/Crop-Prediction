@@ -19,7 +19,7 @@ def create_streamlit_app(model):
         try:
            if ph >0 and ph <=14 and temperature<100 and humidity<100 and rainfall<100:
                 values= [nitrogen, phosphorus, potassium, temperature, humidity, ph, rainfall]
-                model.predict(values)
+                crop_recommendation= model.predict(values)
         
         except Exception as e:
             st.error(f"An Error Occurred: {e}")

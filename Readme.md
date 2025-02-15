@@ -1,6 +1,6 @@
 # Crop Prediction
 
-This project aims to predict the best crops to plant based on various environmental factors such as soil type, weather conditions, and historical crop yield data.
+This project aims to predict the best crop to plant based on various environmental factors such as soil type, weather conditions, and historical crop yield data.
 
 
 ## Introduction
@@ -13,7 +13,7 @@ Crop prediction is essential for optimizing agricultural productivity. This proj
 - Visualization of prediction results
 
 ## Installation
-To install the necessary dependencies, run the following command:
+To install the necessary dependencies for the project, run the following command:
 ```bash
 pip install -r requirements.txt
 ```

@@ -1,4 +1,4 @@
-# Crop Prediction
+# Crop Prediction using ML model
 
 This project aims to predict the best crop to plant based on various environmental factors such as soil type, weather conditions, and historical crop yield data.
 
@@ -13,7 +13,7 @@ Crop prediction is essential for optimizing agricultural productivity. This proj
 - Visualization of prediction results
 
 ## Installation
-To install the necessary dependencies for the project, run the following command:
+To install the necessary dependencies for the project. We have to run the following command using the 'requirements.txt' file:
 ```bash
 pip install -r requirements.txt
 ```

@@ -1,4 +1,4 @@
-# Crop Prediction using ML model
+# Crop Prediction using TensorFlow model
 
 This project aims to predict the best crop to plant based on various environmental factors such as soil type, weather conditions, and historical crop yield data.
 
